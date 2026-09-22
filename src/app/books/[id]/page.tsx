@@ -17,11 +17,12 @@ const getBooks = async (): Promise<BookType[]> => {
     );
 
     if (!res.ok) {
-      throw new Error("Failed to fetch books");
+      throw new Error(`Failed to fetch books: ${res.status}`);
     }
 
     return res.json();
-  } catch {
+  } catch (error) {
+    console.error("Books fetch error:", error);
     throw new Error("Failed to fetch books");
   }
 };
