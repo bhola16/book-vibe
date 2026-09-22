@@ -11,13 +11,15 @@ type Props = {
 };
 
 const getBooks = async (): Promise<BookType[]> => {
-  const res = await fetch("http://localhost:3000/booksData.json");
-
-  if (!res.ok) {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/bookData.json`,
+    );
+    return res.json();
+  } catch (error) {
     throw new Error("Failed to fetch books");
+    return [];
   }
-
-  return res.json();
 };
 
 const BookDetailsPage = async ({ params }: Props) => {
