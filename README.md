@@ -5,40 +5,41 @@ Book Vibe is a modern and responsive online bookstore web application built with
 Users can explore books, view detailed information, add books to their reading list or wishlist, and see their reading progress through a simple chart.
 
 ## 🌐 Live Demo
+
 Vercel: https://book-vibe-2-teal.vercel.app/
 
-
 ## 📂 Repository
+
 Github Repo: https://github.com/bhola16/book-vibe
 
 ---
 
 ## ✨ Features
 
-* 📚 Browse a collection of books
-* 🔎 View detailed information about each book
-* 📖 Add books to the **Read Books** list
-* ❤️ Add books to the **Wishlist**
-* 📊 View read books with a reading-progress chart
-* 📱 Fully responsive design
-* 🧭 Easy navigation with a sticky navbar
-* 🎨 Clean and modern bookstore UI
-* ⚡ Fast page rendering with Next.js
-* 🖼️ Optimized book images using Next.js Image
-* 🔗 Dynamic book details pages
+- 📚 Browse a collection of books
+- 🔎 View detailed information about each book
+- 📖 Add books to the **Read Books** list
+- ❤️ Add books to the **Wishlist**
+- 📊 View read books with a reading-progress chart
+- 📱 Fully responsive design
+- 🧭 Easy navigation with a sticky navbar
+- 🎨 Clean and modern bookstore UI
+- ⚡ Fast page rendering with Next.js
+- 🖼️ Optimized book images using Next.js Image
+- 🔗 Dynamic book details pages
 
 ---
 
 ## 🛠️ Technologies Used
 
-* **Next.js 16**
-* **React**
-* **TypeScript**
-* **Tailwind CSS**
-* **DaisyUI**
-* **Recharts**
-* **Next.js Image**
-* **JSON** for book data
+- **Next.js 16**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **DaisyUI**
+- **Recharts**
+- **Next.js Image**
+- **JSON** for book data
 
 ---
 
@@ -228,13 +229,13 @@ type BookType = {
 
 The application uses a warm bookstore-inspired design with:
 
-* Soft cream backgrounds
-* Brown and terracotta accents
-* Rounded cards
-* Hover animations
-* Responsive layouts
-* Clean typography
-* Book-cover focused presentation
+- Soft cream backgrounds
+- Brown and terracotta accents
+- Rounded cards
+- Hover animations
+- Responsive layouts
+- Clean typography
+- Book-cover focused presentation
 
 The interface is designed to provide a simple and comfortable browsing experience.
 
@@ -244,9 +245,9 @@ The interface is designed to provide a simple and comfortable browsing experienc
 
 Book Vibe is responsive across different screen sizes:
 
-* 📱 Mobile
-* 📲 Tablet
-* 💻 Desktop
+- 📱 Mobile
+- 📲 Tablet
+- 💻 Desktop
 
 Tailwind CSS responsive utilities are used throughout the application.
 
@@ -256,15 +257,15 @@ Tailwind CSS responsive utilities are used throughout the application.
 
 Some possible future improvements include:
 
-* 🔐 User authentication
-* 💾 Persistent wishlist and reading list
-* 🔍 Book search functionality
-* 🏷️ Category filtering
-* ⭐ Book reviews and ratings
-* 📚 Pagination
-* 🌓 Dark mode
-* 🗄️ Database integration
-* 👤 User profiles
+- 🔐 User authentication
+- 💾 Persistent wishlist and reading list
+- 🔍 Book search functionality
+- 🏷️ Category filtering
+- ⭐ Book reviews and ratings
+- 📚 Pagination
+- 🌓 Dark mode
+- 🗄️ Database integration
+- 👤 User profiles
 
 ---
 
@@ -277,5 +278,5 @@ ECE Graduate | Software Developer | AI Engineer in Progress
 ---
 
 ## 📄 License
+This project was created for educational purposes as part of the Programming Hero Web Development course.
 
-This project was created for educational and learning purposes.
