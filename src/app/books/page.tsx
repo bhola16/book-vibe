@@ -4,10 +4,10 @@ import { BookType } from "@/types/Type";
 const getBooks = async (): Promise<BookType[]> => {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/bookData.json`,
+      `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`,
     );
     return res.json();
-  } catch (error) {
+  } catch {
     throw new Error("Failed to fetch books");
     return [];
   }
