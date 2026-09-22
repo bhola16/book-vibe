@@ -1,36 +1,281 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 Book Vibe
 
-## Getting Started
+Book Vibe is a modern and responsive online bookstore web application built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **DaisyUI**.
 
-First, run the development server:
+Users can explore books, view detailed information, add books to their reading list or wishlist, and see their reading progress through a simple chart.
+
+## 🌐 Live Demo
+Vercel: https://book-vibe-2-teal.vercel.app/
+
+
+## 📂 Repository
+Github Repo: https://github.com/bhola16/book-vibe
+
+---
+
+## ✨ Features
+
+* 📚 Browse a collection of books
+* 🔎 View detailed information about each book
+* 📖 Add books to the **Read Books** list
+* ❤️ Add books to the **Wishlist**
+* 📊 View read books with a reading-progress chart
+* 📱 Fully responsive design
+* 🧭 Easy navigation with a sticky navbar
+* 🎨 Clean and modern bookstore UI
+* ⚡ Fast page rendering with Next.js
+* 🖼️ Optimized book images using Next.js Image
+* 🔗 Dynamic book details pages
+
+---
+
+## 🛠️ Technologies Used
+
+* **Next.js 16**
+* **React**
+* **TypeScript**
+* **Tailwind CSS**
+* **DaisyUI**
+* **Recharts**
+* **Next.js Image**
+* **JSON** for book data
+
+---
+
+## 📁 Project Structure
+
+```text
+book-vibe/
+├── public/
+│   ├── booksData.json
+│   └── ...
+│
+├── src/
+│   ├── app/
+│   │   ├── books/
+│   │   │   ├── page.tsx
+│   │   │   └── [id]/
+│   │   │       └── page.tsx
+│   │   ├── listed-books/
+│   │   │   └── page.tsx
+│   │   ├── read-book/
+│   │   │   └── page.tsx
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   └── globals.css
+│   │
+│   ├── components/
+│   │   ├── Homepage/
+│   │   │   ├── Banner.tsx
+│   │   │   └── Books.tsx
+│   │   └── shared/
+│   │       ├── Navbar.tsx
+│   │       ├── Footer.tsx
+│   │       ├── BookCard.tsx
+│   │       ├── ListedBookCard.tsx
+│   │       ├── ReadButton.tsx
+│   │       └── WishListButton.tsx
+│   │
+│   ├── context/
+│   │   └── BooksContext.tsx
+│   │
+│   ├── types/
+│   │   └── Type.ts
+│   │
+│   └── ...
+│
+├── next.config.ts
+├── package.json
+├── tsconfig.json
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### 2. Navigate to the Project
+
+```bash
+cd book-vibe
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```env
+NEXT_PUBLIC_SERVER_BASE_URL=http://localhost:3000
+```
+
+Make sure `booksData.json` is available inside the `public` directory.
+
+The JSON file can then be accessed through:
+
+```text
+http://localhost:3000/booksData.json
+```
+
+### 5. Start the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📖 Main Pages
 
-To learn more about Next.js, take a look at the following resources:
+### Home
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+/
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The homepage contains the banner and featured books.
 
-## Deploy on Vercel
+### Books
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+/books
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Displays the complete collection of books.
+
+### Book Details
+
+```text
+/books/[id]
+```
+
+Displays detailed information about an individual book.
+
+Example:
+
+```text
+/books/1
+```
+
+### Listed Books
+
+```text
+/listed-books
+```
+
+Displays books that have been added to the Read Books list and Wishlist.
+
+### Read Books
+
+```text
+/read-book
+```
+
+Displays the user's read books along with a chart based on the number of pages.
+
+---
+
+## 📊 Reading Progress
+
+The Read Books page uses **Recharts** to visualize the number of pages of books added to the reading list.
+
+Each book is represented as a bar in the chart, making it easier to compare the page counts of the books being read.
+
+---
+
+## 🗂️ Book Data
+
+Each book contains information such as:
+
+```ts
+type BookType = {
+  bookId: number;
+  bookName: string;
+  author: string;
+  image: string;
+  review: string;
+  totalPages: number;
+  rating: number;
+  category: string;
+  tags: string[];
+  publisher: string;
+  yearOfPublishing: number;
+};
+```
+
+---
+
+## 🎨 Design
+
+The application uses a warm bookstore-inspired design with:
+
+* Soft cream backgrounds
+* Brown and terracotta accents
+* Rounded cards
+* Hover animations
+* Responsive layouts
+* Clean typography
+* Book-cover focused presentation
+
+The interface is designed to provide a simple and comfortable browsing experience.
+
+---
+
+## 📱 Responsive Design
+
+Book Vibe is responsive across different screen sizes:
+
+* 📱 Mobile
+* 📲 Tablet
+* 💻 Desktop
+
+Tailwind CSS responsive utilities are used throughout the application.
+
+---
+
+## 🔮 Future Improvements
+
+Some possible future improvements include:
+
+* 🔐 User authentication
+* 💾 Persistent wishlist and reading list
+* 🔍 Book search functionality
+* 🏷️ Category filtering
+* ⭐ Book reviews and ratings
+* 📚 Pagination
+* 🌓 Dark mode
+* 🗄️ Database integration
+* 👤 User profiles
+
+---
+
+## 👨‍💻 Author
+
+**Bholanath Bala**
+
+ECE Graduate | Software Developer | AI Engineer in Progress
+
+---
+
+## 📄 License
+
+This project was created for educational and learning purposes.
